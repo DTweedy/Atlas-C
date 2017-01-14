@@ -235,10 +235,147 @@ void Dave()
 // POINTS SCORED:
 //
 void Daniel()
-{	//Write auton here
+{	 //start auton
+	 //Use the deploy thing first so that the lift drops down to the ground to start.
+	 startMotor(RightFront,100);
+	 startMotor(LeftRear,-100);
+	 wait(1) // In Seconds
+	 stopMotor(RightFront);
+	 stopMotor(LeftRear);
+	 //turn left
+	 startMotor(Claw1,100);
+	 startMotor(Claw2,100);
+	 wait(1) // In Seconds
+	 stopMotor(Claw1);
+	 stopMotor(Claw2);
+	 //pick up star to the left of starting square
+	 startMotor(RightRear,-100);
+	 startMotor(LeftFront,100);
+	 wait(1) // In Seconds
+	 stopMotor(RightRear);
+	 stopMotor(LeftFront);
+	 //turn back to front-face
+	 startMotor(RightFront,127);
+	 startMotor(RightRear,127);
+	 startMotor(LeftFront,127);
+	 startMotor(LeftRear,127);
+	 wait(4) // In Seconds
+	 stopMotor(RightFront);
+	 stopMotor(RightRear);
+	 stopMotor(LeftFront);
+	 stopMotor(LeftRear);
+	 //drive up to fence
+	 startMotor(LeftLifts,100);
+	 startMotor(RightLifts,100);
+	 wait(1) // In Seconds
+	 stopMotor(LeftLifts);
+	 stopMotor(RightLifts);
+	 //lift lifts all the way up
+	 startMotor(RightFront,127);
+	 startMotor(RightRear,127);
+	 startMotor(LeftFront,127);
+	 startMotor(LeftRear,127);
+	 wait(.25) // In Seconds
+	 stopMotor(RightFront);
+	 stopMotor(RightRear);
+	 stopMotor(LeftFront);
+	 stopMotor(LeftRear);
+	 //drive directly into fence to push stars off of fence
+	 startMotor(LeftLifts,-100);
+	 startMotor(RightLifts,-100);
+	 wait(.25) // In Seconds
+	 stopMotor(LeftLifts);
+	 stopMotor(RightLifts);
+	 //drop lift onto fence (make it flat) so that when claws open the stars fall off onto the other side
+	 startMotor(Claw1,-127);
+	 startMotor(Claw2,-127);
+	 wait(1) // In Seconds
+	 stopMotor(Claw1);
+	 stopMotor(Claw2);
+	 //open claw to drop contents
+	 startMotor(RightFront,-127);
+	 startMotor(RightRear,-127);
+	 startMotor(LeftFront,-127);
+	 startMotor(LeftRear,-127);
+	 wait(.5) // In Seconds
+	 stopMotor(RightFront);
+	 stopMotor(RightRear);
+	 stopMotor(LeftFront);
+	 stopMotor(LeftRear);
+	 //back away from fence
+	 startMotor(LeftLifts,-127);
+	 startMotor(RightLifts,-127);
+	 wait(1) // In Seconds
+	 stopMotor(LeftLifts);
+	 stopMotor(RightLifts);
+	 //drop the platform onto the ground
+	 startMotor(RightRear,-127);
+	 startMotor(LeftFront,127);
+	 wait(1); // In Seconds
+	 stopMotor(RightRear);
+	 stopMotor(LeftFront);
+	 //turn right to face the cube directly
+	 startMotor(RightFront,127);
+	 startMotor(RightRear,127);
+	 startMotor(LeftFront,127);
+	 startMotor(LeftRear,127);
+	 wait(1) // In Seconds
+	 stopMotor(RightFront);
+	 stopMotor(RightRear);
+	 stopMotor(LeftFront);
+	 stopMotor(LeftRear);
+	 //drive into cube so that the platform is positioned under cube
+	 startMotor(Claw1,127);
+	 startMotor(Claw2,127);
+	 wait(1) // In Seconds
+	 stopMotor(Claw1);
+	 stopMotor(Claw2);
+	 //close claw around cube
+	 startMotor(RightFront,100);
+	 startMotor(LeftRear,-100);
+	 wait(1) // In Seconds
+	 stopMotor(RightFront);
+	 stopMotor(LeftRear);
+	 //turn left in order to face towards fence
+	 startMotor(LeftLifts,100);
+	 startMotor(RightLifts,100);
+	 wait(1) // In Seconds
+	 stopMotor(LeftLifts);
+	 stopMotor(RightLifts);
+	 //lift lifts all the way up
+	 startMotor(RightFront,127);
+	 startMotor(RightRear,127);
+	 startMotor(LeftFront,127);
+	 startMotor(LeftRear,127);
+	 wait(.25) // In Seconds
+	 stopMotor(RightFront);
+	 stopMotor(RightRear);
+	 stopMotor(LeftFront);
+	 stopMotor(LeftRear);
+	 //drive directly into fence to push stars off of fence
+	 startMotor(LeftLifts,-100);
+	 startMotor(RightLifts,-100);
+	 wait(.25) // In Seconds
+	 stopMotor(LeftLifts);
+	 stopMotor(RightLifts);
+	 //drop lift onto fence (make it flat) so that when claws open the cube falls off onto the other side
+	 startMotor(Claw1,-127);
+	 startMotor(Claw2,-127);
+	 wait(1) // In Seconds
+	 stopMotor(Claw1);
+	 stopMotor(Claw2);
+	 //open claw to drop the cube onto the other side
+	 
+	 //this will probably barely make time limit if even
+	 
 
 }
 
+	//POINTS SCORED: 5 (weak sauce. I'm sorry! But, it does set up for a good driver control start) Possibly scores 11 max but the
+	//auton might be super overloaded based on the time limit so in theory it can get 11 if other robots dont interfere or 
+	//score any of the points I plan on scoring with this auton obviously. I do not know the grammar really anymore so you will
+	//have to add in necessary brackets (I think the only things I left out). Also, I will need to test it in person tomorrow 
+	//to fine tune wait times and motor values and such. In theory this is the frame though.
 void Ocean_Man()// I dunno man just don't use it, its a secret weapon i swear
 {
 
